@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mesajlaşma Uygulaması</title>
+
+    <!-- Stil dosyalarını dinamik yüklemek için JavaScript -->
+    <script>
+        // Ekran oranını hesaplayan fonksiyon
+        function getAspectRatio() {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            return width / height; // Genişlik / yükseklik oranı
+        }
+
+        // Stil dosyasını dinamik olarak yükleyen fonksiyon
+        function loadStylesheet() {
+            var aspectRatio = getAspectRatio();
+            var linkElement = document.createElement("link");
+            linkElement.rel = "stylesheet";
+
+            // Mobil ya da masaüstü cihaz için uygun CSS dosyasını seç
+            if (aspectRatio < 1) {
+                // Mobil cihaz
+                linkElement.href = "/static/css/mobile.css";
+                console.log("Mobil stil yüklendi.");
+            } else {
+                // Masaüstü cihaz
+                linkElement.href = "/static/css/desktop.css";
+                linkElement.href = "/static/css/mobile.css";
+
+                console.log("Masaüstü stil yüklendi.");
+            }
+
+            // Stil dosyasını belgeye ekle
+            document.head.appendChild(linkElement);
+        }
+
+        // Sayfa yüklenirken ve pencere boyutları değiştiğinde uygun stil dosyasını yükle
+        window.addEventListener("load", loadStylesheet);
+        window.addEventListener("resize", loadStylesheet);
+    </script>
+</head>
+<body>
+    <!-- Ana Konteyner -->
+    <div class="container">
+        <h1>Mesaj Gönderme Sayfası</h1>
+        <!-- Mesaj Gönderme Formu -->
+        <div class="form-container">
+            <form id="messageForm">
+                <textarea
+                    class="message-input"
+                    name="message"
+                    id="messageInput"
+                    placeholder="Mesajınızı girin"
+                    required></textarea>
+                <div class="button-container">
+                    <button type="submit" id="sendMessage">Gönder</button>
+                </div>
+            </form>
+        </div>
+        <!-- Gece Modu Butonu -->
+        <button id="darkModeToggle">Gece Modu</button>
+    </div>
+
+    <!-- Yan Panel -->
+    <div class="sidebar">
+        <h2>Gelen Mesajlar</h2>
+        <ul id="messageList">
+            <!-- Dinamik olarak mesajlar buraya eklenecek -->
+        </ul>
+    </div>
+
+    <!-- Bildirim Konteyneri -->
+    <div id="Notification" class="notification"></div>
+
+    <!-- Javascript Dosyasını Dahil Et -->
+    <script src="/scripts/desktop.js"></script>
+</body>
+</html>

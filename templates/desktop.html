@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlaşma Uygulaması - Masaüstü</title>
+    <link rel="stylesheet" href="/static/css/desktop.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mesaj Gönderme Sayfası</h1>
+
+        <div class="form-container">
+            <form id="messageForm">
+                <textarea
+                    class="message-input"
+                    name="message"
+                    id="messageInput"
+                    placeholder="Mesajınızı girin"
+                    required></textarea>
+                <div class="button-container">
+                    <button type="submit" id="sendMessage">Gönder</button>
+                </div>
+            </form>
+        </div>
+
+        <button id="darkModeToggle">Gece Modu</button>
+
+        <div class="sidebar">
+            <h2>Gelen Mesajlar</h2>
+            <ul id="messageList">
+                <!-- Dinamik mesajlar buraya eklenecek -->
+            </ul>
+        </div>
+    </div>
+
+    <div id="copyNotification" class="copy-notification">Mesaj Kopyalandı!</div>
+    <div id="newMessageNotification" class="new-message--notification">Yeni mesajın var!</div>
+
+    <script src="/static/scripts/desktop.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+:root {
+    --vh: 100vh;
+}
+
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    height: var(--vh);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+/* Heading */
+h1 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#darkModeToggle:hover {
+    background-color: #3e8e41;
+}
+
+/* Sidebar */
+.sidebar {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 500px;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    align-items: center;
+}
+
+/* Message List */
+#messageList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#messageList li {
+    background-color: rgba(233, 238, 244, 0.8);
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 20px;
+    max-width: 70%;
+    font-size: 14px;
+    word-break: break-word;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Message Input Wrapper */
+.message-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.message-input {
+    flex-grow: 1;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+}
+
+/* Send Button */
+#sendMessage {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#sendMessage:active {
+    transform: scale(0.9);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+}
+
+.dark-mode .message-input-wrapper {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .message-input {
+    color: white;
+}
+
+.dark-mode #messageList li {
+    background-color: rgba(60, 60, 60, 0.7);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 600px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    #messageList li {
+        max-width: 90%; /* More room on small screens */
+        font-size: 16px; /* Increase font size for better readability */
+    }
+
+    .form-container {
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+        padding: 0;
+    }
+
+    .message-input-wrapper {
+        border-radius: 30px;
+        width: 90%; /* Full width with some padding */
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #sendMessage {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Scrollbar Styling for mobile */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}

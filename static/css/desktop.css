@@ -1,0 +1,254 @@
+/* Genel stil ayarları */
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ana konteyner */
+.container {
+    width: 70%;
+    padding: 20px;
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Yan panel */
+.sidebar {
+    width: 30%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Liste ayarları */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+
+li {
+    background-color: #e2e2e2;
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #ccc;
+}
+
+/* Form konteyner */
+.form-container {
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Mesaj girişi */
+.message-input {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 15px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+/* Butonlar */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+
+/* Copy Notification style */
+.copy-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;  /* Hidden by default */
+    z-index: 1000;  /* Ensure it's on top */
+    font-size: 16px;
+    user-select: none;  /* Disable text selection */
+    pointer-events: none;  /* Disable interactions */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.copy-notification.show {
+    display: block;
+    opacity: 1;
+}
+/* New Message Notification style */
+.new-message--notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;  /* Hidden by default */
+    z-index: 1000;  /* Ensure it's on top */
+    font-size: 16px;
+    user-select: none;  /* Disable text selection */
+    pointer-events: none;  /* Disable interactions */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.new-message--notification.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;  /* Make it clickable */
+}
+
+/* Gece modu butonu */
+#darkModeToggle {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #333;
+}
+
+/* Gece modu */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .sidebar {
+    background-color: #333;
+}
+
+.dark-mode ul li {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode li:hover {
+    background-color: #555;
+}
+
+.dark-mode button {
+    background-color: #666;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background-color: #555;
+}
+
+.dark-mode .message-input {
+    background-color: #333;
+    color: white;
+    border-color: #666;
+}
+
+/* Bildirim stili */
+.notification {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the timestamp */
+.message-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.timestamp {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.message-content {
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+
+
+/* Style for the IP address */
+.message-sender {
+    font-size: 0.7rem;
+    color: #bbb;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
+

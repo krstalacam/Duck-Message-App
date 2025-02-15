@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlaşma Uygulaması</title>
+    <link rel="stylesheet" href="/static/css/mobile.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Başlık -->
+        <h1>Mesaj Gönderme Sayfası</h1>
+
+        <!-- Gelen Mesajlar -->
+        <div class="sidebar">
+            <!-- Gece Modu Butonu -->
+            <button id="darkModeToggle">Gece Modu</button>
+            <h2>Gelen Mesajlar</h2>
+            <ul id="messageList">
+                <!-- Dinamik mesajlar buraya eklenecek -->
+            </ul>
+        </div>
+
+        <!-- Mesaj Gönderme Formu -->
+        <form id="messageForm">
+            <div class="message-input-wrapper">
+                <textarea
+                    class="message-input"
+                    name="message"
+                    id="messageInput"
+                    placeholder="Mesajınızı girin"
+                    required></textarea>
+                <button type="submit" id="sendMessage">Gönder</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="newMessageNotification" class="new-message--notification">Yeni mesajın var!</div>
+
+    <script src="/static/scripts/mobile.js"></script>
+</body>
+</html>
