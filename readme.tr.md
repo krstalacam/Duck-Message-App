@@ -67,7 +67,7 @@ Merhaba! 👋 Bu uygulama, telefonlar ve bilgisayarlar için uyumlu bir **mesajl
 
 ## 📥 İndirme
 Uygulamayı indirmek için aşağıdaki bağlantıyı kullanabilirsiniz:  
-[Message App İndir](dist\duck-message-app.exe)
+[Message App İndir](https://github.com/krstalacam/Duck-Message-App-/releases/download/v1.0.0/duck-message-app.exe)
 
 ---
 

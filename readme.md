@@ -67,7 +67,7 @@ Hello! 👋 This app provides a **messaging platform** compatible with both phon
 
 ## 📥 Download
 You can download the app using the link below:  
-[Download Message App](dist\duck-message-app.exe)
+[Download Message App](https://github.com/krstalacam/Duck-Message-App-/releases/download/v1.0.0/duck-message-app.exe)
 
 ---
 
