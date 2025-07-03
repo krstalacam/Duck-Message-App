@@ -1,4 +1,7 @@
 # 🦆 Message App
+
+GIF'lerin yüklenmesi biraz zaman alabilir, bu yüzden bir kahve alın, arkanıza yaslanın ve güzelliğin ortaya çıkmasını izlemeye hazır olun!
+
 ![website](assets/gif/website.gif)
 
 ---

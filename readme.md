@@ -1,4 +1,7 @@
 # 🦆 Message App
+
+GIFs might take a bit to load, so grab a coffee, kick back, and get ready to witness the beauty unfold!
+
 ![website](assets/gif/website.gif)
 
 ---
